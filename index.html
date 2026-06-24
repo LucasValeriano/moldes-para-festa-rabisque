@@ -186,6 +186,7 @@
             margin-bottom: 24px;
             font-weight: 500;
             line-height: 1.5;
+            text-align: center;
         }
 
         .hero-features {
@@ -193,16 +194,18 @@
             flex-direction: column;
             gap: 10px;
             margin-bottom: 28px;
+            align-items: center;
         }
 
         .feature-item {
             display: flex;
-            align-items: flex-start;
+            align-items: center;
+            justify-content: center;
             gap: 8px;
             font-weight: 600;
             font-size: 0.88rem;
             color: var(--dark);
-            text-align: left;
+            text-align: center;
         }
 
         .feature-item i {
@@ -991,29 +994,56 @@
             }
 
             .hero {
-                text-align: left;
+                text-align: center;
             }
 
             .hero h1 {
-                text-align: left;
+                text-align: center;
                 font-size: 2.8rem;
             }
 
             .hero-layout {
-                grid-template-columns: 1.1fr 0.9fr;
-                display: grid;
-                gap: 40px;
+                grid-template-columns: 1fr;
+                display: block;
+                max-width: 800px;
+                margin: 0 auto;
+            }
+
+            .hero-content {
+                display: flex;
+                flex-direction: column;
                 align-items: center;
+                text-align: center;
+            }
+
+            .hero-desc {
+                max-width: 700px;
+                margin-left: auto;
+                margin-right: auto;
+                text-align: center;
+            }
+
+            .hero-features {
+                flex-direction: column;
+                align-items: center;
+                gap: 12px;
+                margin-bottom: 30px;
+            }
+
+            .feature-item {
+                justify-content: center;
+                text-align: center;
+            }
+
+            .btn-cta {
+                max-width: 450px;
+                margin: 0 auto;
             }
 
             .cta-subtext {
                 flex-direction: row;
                 gap: 15px;
-            }
-
-            .hero-features {
-                grid-template-columns: 1fr;
-                display: flex;
+                justify-content: center;
             }
 
             .steps-grid, .orderbumps-grid {
