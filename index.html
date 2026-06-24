@@ -1860,6 +1860,7 @@
         // POPUP UNIVERSAL (Exit Intent + Upsell ao clicar no Básico)
         // ============================================================
         let exitPopupShown = false;
+        let blockPopState = false; // Flag para ignorar popstate ao navegar por âncoras locais
 
         function showExitPopup() {
             if (!exitPopupShown) {
@@ -1872,8 +1873,28 @@
             document.getElementById('exitPopup').classList.remove('show');
         }
 
+        // ── Evitar scroll automático no carregamento (mobile) ─────────
+        if ('scrollRestoration' in history) {
+            history.scrollRestoration = 'manual';
+        }
+        window.addEventListener('DOMContentLoaded', () => {
+            // Garante que o navegador inicie no topo (Y = 0)
+            setTimeout(() => {
+                window.scrollTo(0, 0);
+            }, 50);
+        });
+
+        // Intercepta cliques nos links com âncora (#) para bloquear o popstate temporariamente
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                blockPopState = true;
+                setTimeout(() => {
+                    blockPopState = false;
+                }, 1500); // Bloqueia trigger por 1.5s após a rolagem suave
+            });
+        });
+
         // ── 1. Exit Intent: Mouse sai pelo topo (Desktop) ──────────────
-        // Aguarda 3s após o carregamento para evitar disparos falsos
         setTimeout(function () {
             document.addEventListener('mouseleave', function (e) {
                 if (e.clientY < 5) {
@@ -1890,11 +1911,11 @@
         });
 
         // ── 3. Mobile: Rolagem rápida para o topo indica saída ──────────
-        // Aguarda 4s para evitar disparo no carregamento da página
         setTimeout(function () {
             let lastScrollY = window.scrollY;
             window.addEventListener('scroll', function () {
-                if (window.scrollY < lastScrollY - 200 && window.scrollY < 200) {
+                // Apenas dispara se o usuário estiver rolando rápido de fato e já estiver mais abaixo na página
+                if (window.scrollY < lastScrollY - 200 && window.scrollY < 200 && lastScrollY > 400) {
                     showExitPopup();
                 }
                 lastScrollY = window.scrollY;
@@ -1902,12 +1923,16 @@
         }, 4000);
 
         // ── 4. Botão voltar do navegador (Mobile) ───────────────────────
-        // Usa setTimeout para não interferir com o anchor #precos
         setTimeout(function () {
-            history.pushState(null, null, document.URL);
-            window.addEventListener('popstate', function () {
+            // Registra um estado limpo no início sem alterar o hash visual da URL
+            history.pushState({ type: 'exit_intent' }, null, '');
+            window.addEventListener('popstate', function (event) {
+                if (blockPopState) {
+                    // Ignora se o popstate foi disparado por navegação de âncora local (#precos, etc)
+                    return;
+                }
                 showExitPopup();
-                history.pushState(null, null, document.URL);
+                history.pushState({ type: 'exit_intent' }, null, '');
             });
         }, 2000);
 
@@ -1917,8 +1942,8 @@
         document.getElementById('btnBasico').addEventListener('click', function () {
             popupFromBasico = true;
             // Personaliza o popup para o contexto de upsell do básico
-            document.querySelector('#exitPopup .exit-popup-title').textContent = 'ESPERA! ANTES DE CONTINUAR...';
-            document.querySelector('#exitPopup .exit-popup-desc').innerHTML = 'Que tal levar o <strong>PLANO PREMIUM COMPLETO</strong> com todos os bônus por apenas R$&nbsp;5,00 a mais? É por tempo limitado!';
+            document.querySelector('#exitPopup #exitPopupTitle').innerHTML = 'ESPERA! LEVE O <span>PREMIUM COMPLETO</span><br>por quase nada 👇';
+            document.querySelector('#exitPopup #exitPopupDesc').innerHTML = 'Que tal levar o <strong>PLANO PREMIUM COMPLETO</strong> com todos os bônus por apenas R$&nbsp;5,00 a mais? É por tempo limitado!';
             document.getElementById('exitPopup').classList.add('show');
             exitPopupShown = true;
         });
