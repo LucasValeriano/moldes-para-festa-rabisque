@@ -2002,6 +2002,16 @@
 
         document.getElementById('btnBasico').addEventListener('click', function () {
             popupFromBasico = true;
+            
+            // Dispara o InitiateCheckout para o Plano Básico
+            if (typeof fbq === 'function') {
+                fbq('track', 'InitiateCheckout', {
+                    content_name: 'Plano Básico - Kit 10.000 Temas',
+                    value: 9.90,
+                    currency: 'BRL'
+                });
+            }
+
             // Personaliza o popup para o contexto de upsell do básico
             document.querySelector('#exitPopup #exitPopupTitle').innerHTML = 'ESPERA! LEVE O <span>PREMIUM COMPLETO</span><br>por quase nada 👇';
             document.querySelector('#exitPopup #exitPopupDesc').innerHTML = 'Que tal levar o <strong>PLANO PREMIUM COMPLETO</strong> com todos os bônus por apenas R$&nbsp;5,00 a mais? É por tempo limitado!';
@@ -2020,6 +2030,35 @@
             if (popupFromBasico) {
                 popupFromBasico = false;
                 window.open('https://pay.wiapy.com/Xnn_R0YhRJJ', '_blank');
+            }
+        });
+
+        // ── Rastreio de cliques nos links de checkout (InitiateCheckout) ──
+        document.addEventListener('click', function (e) {
+            const anchor = e.target.closest('a');
+            if (!anchor) return;
+            const href = anchor.getAttribute('href') || '';
+
+            // Rastreio para o Plano Premium (R$ 19,90)
+            if (href.includes('jIjFD6bMG4K')) {
+                if (typeof fbq === 'function') {
+                    fbq('track', 'InitiateCheckout', {
+                        content_name: 'Plano Premium - Kit 10.000 Temas + Bônus',
+                        value: 19.90,
+                        currency: 'BRL'
+                    });
+                }
+            }
+
+            // Rastreio para o Desconto de Saída (R$ 15,00)
+            if (href.includes('2K7U6_yQoYT')) {
+                if (typeof fbq === 'function') {
+                    fbq('track', 'InitiateCheckout', {
+                        content_name: 'Desconto de Saída - Plano Premium',
+                        value: 15.00,
+                        currency: 'BRL'
+                    });
+                }
             }
         });
     </script>
