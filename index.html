@@ -591,15 +591,21 @@
         .featured-badge {
             position: absolute;
             top: 15px;
-            right: -35px;
-            background: linear-gradient(135deg, var(--secondary) 0%, var(--primary) 100%);
+            left: 50%;
+            transform: translateX(-50%);
+            background: linear-gradient(135deg, #ef4444 0%, #d97706 100%);
             color: var(--white);
-            font-size: 0.65rem;
-            font-weight: 800;
-            padding: 6px 40px;
-            transform: rotate(45deg);
-            box-shadow: var(--shadow-sm);
-            letter-spacing: 0.5px;
+            font-size: 0.72rem;
+            font-weight: 900;
+            padding: 6px 16px;
+            border-radius: 50px;
+            box-shadow: 0 4px 10px rgba(239, 68, 68, 0.25);
+            letter-spacing: 0.8px;
+            text-transform: uppercase;
+            white-space: nowrap;
+            display: flex;
+            align-items: center;
+            gap: 4px;
         }
 
         .pricing-title {
@@ -1309,8 +1315,8 @@
                 </div>
 
                 <!-- PLANO PREMIUM (Destaque e Ancoragem) -->
-                <div class="pricing-card featured">
-                    <div class="featured-badge">MAIS VENDIDO</div>
+                <div class="pricing-card featured" style="padding-top: 55px;">
+                    <div class="featured-badge">🚀 RECOMENDADO</div>
                     <h3 class="pricing-title">PLANO PREMIUM</h3>
                     <p class="pricing-subtitle">Tudo do Básico + Combo Principal e Bônus</p>
                     
