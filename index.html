@@ -2035,11 +2035,21 @@
             }
         });
 
-        // ── Rastreio de cliques nos links de checkout (InitiateCheckout) ──
+        // ── Rastreio de cliques nos links de checkout (InitiateCheckout / ViewContent) ──
         document.addEventListener('click', function (e) {
             const anchor = e.target.closest('a');
             if (!anchor) return;
             const href = anchor.getAttribute('href') || '';
+
+            // Rastreio para o Botão de Ancoragem da Hero (ViewContent)
+            if (href === '#precos') {
+                if (typeof fbq === 'function') {
+                    fbq('track', 'ViewContent', {
+                        content_name: 'Hero CTA - Rolagem para Preços',
+                        content_category: 'Navegação'
+                    });
+                }
+            }
 
             // Rastreio para o Plano Premium (R$ 19,90)
             if (href.includes('jIjFD6bMG4K')) {
