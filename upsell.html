@@ -329,6 +329,31 @@
                     refusalLinkText: "Recusar está oferta",
                     refusalLinkColor: "#000000"
                   });
+
+                  // Intercepta e dispara o evento de Purchase (1-Clique) quando o lead aceitar o upsell
+                  document.addEventListener('click', function(e) {
+                      const button = e.target.closest('#wiapy_upsell button, #wiapy_upsell a:not([href*="login"])');
+                      if (button) {
+                          if (typeof fbq === 'function') {
+                              fbq('track', 'Purchase', {
+                                  content_name: 'Upsell - Curso de Balões',
+                                  value: 37.00,
+                                  currency: 'BRL'
+                              });
+                          }
+                      }
+
+                      // Rastreia a recusa
+                      const refusal = e.target.closest('#wiapy_upsell a[href*="login"]');
+                      if (refusal) {
+                          if (typeof fbq === 'function') {
+                              fbq('track', 'CustomEvent', {
+                                  event_name: 'UpsellRefused',
+                                  content_name: 'Upsell - Curso de Balões'
+                              });
+                          }
+                      }
+                  });
                 </script>
 
                 <div class="guarantee-info">
