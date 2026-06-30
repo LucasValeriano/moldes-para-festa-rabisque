@@ -1,63 +1,76 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <!-- Meta Pixel Code -->
     <script>
-      !function(f,b,e,v,n,t,s)
-      {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-      n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-      if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-      n.queue=[];t=b.createElement(e);t.async=!0;
-      t.src=v;s=b.getElementsByTagName(e)[0];
-      s.parentNode.insertBefore(t,s)}(window, document,'script',
-      'https://connect.facebook.net/en_US/fbevents.js');
-      fbq('init', '1047576437624538');
-      fbq('track', 'PageView');
+        !function (f, b, e, v, n, t, s) {
+            if (f.fbq) return; n = f.fbq = function () {
+                n.callMethod ?
+                    n.callMethod.apply(n, arguments) : n.queue.push(arguments)
+            };
+            if (!f._fbq) f._fbq = n; n.push = n; n.loaded = !0; n.version = '2.0';
+            n.queue = []; t = b.createElement(e); t.async = !0;
+            t.src = v; s = b.getElementsByTagName(e)[0];
+            s.parentNode.insertBefore(t, s)
+        }(window, document, 'script',
+            'https://connect.facebook.net/en_US/fbevents.js');
+        fbq('init', '1047576437624538');
+        fbq('track', 'PageView');
     </script>
     <noscript>
-      <img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=1047576437624538&ev=PageView&noscript=1"/>
+        <img height="1" width="1" style="display:none"
+            src="https://www.facebook.com/tr?id=1047576437624538&ev=PageView&noscript=1" />
     </noscript>
     <!-- End Meta Pixel Code -->
 
     <!-- UTMify Scripts -->
-    <script src="https://cdn.utmify.com.br/scripts/utms/latest.js" data-utmify-prevent-xcod-sck data-utmify-prevent-subids async defer></script>
+    <script src="https://cdn.utmify.com.br/scripts/utms/latest.js" data-utmify-prevent-xcod-sck
+        data-utmify-prevent-subids async defer></script>
     <!-- End UTMify Scripts -->
     <title>KIT PREMIUM 10.000 TEMAS — Moldes Editáveis no Canva</title>
-    <meta name="description" content="Tenha acesso ao maior kit de temas de festa do Brasil. Mais de 10.000 temas prontos e 100% editáveis no Canva. Baixe, imprima e monte!">
-    
+    <meta name="description"
+        content="Tenha acesso ao maior kit de temas de festa do Brasil. Mais de 10.000 temas prontos e 100% editáveis no Canva. Baixe, imprima e monte!">
+
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
-    
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+
     <!-- FontAwesome para ícones -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
     <style>
         /* DESIGN SYSTEM - VARIABLES */
         :root {
-            --primary: #8b5cf6; /* Roxo principal */
+            --primary: #8b5cf6;
+            /* Roxo principal */
             --primary-hover: #7c3aed;
             --primary-light: #f5f3ff;
-            --secondary: #ec4899; /* Rosa vibrante */
+            --secondary: #ec4899;
+            /* Rosa vibrante */
             --secondary-light: #fdf2f8;
-            --accent: #22c55e; /* Verde conversão */
+            --accent: #22c55e;
+            /* Verde conversão */
             --accent-hover: #16a34a;
-            --dark: #0f172a; /* Azul escuro */
+            --dark: #0f172a;
+            /* Azul escuro */
             --dark-muted: #475569;
-            --light: #f8fafc; /* Fundo padrão */
+            --light: #f8fafc;
+            /* Fundo padrão */
             --white: #ffffff;
-            
+
             --font-sans: 'Inter', sans-serif;
             --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);
             --shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
             --shadow-md: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
             --shadow-lg: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
             --shadow-premium: 0 20px 40px -15px rgba(139, 92, 246, 0.25);
-            
+
             --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
         }
 
@@ -94,7 +107,8 @@
         }
 
         /* TEXTS OPTIMIZATION */
-        p, .justify-text {
+        p,
+        .justify-text {
             text-align: center;
         }
 
@@ -608,7 +622,8 @@
         .pricing-card.featured {
             border: 3px solid var(--primary);
             box-shadow: var(--shadow-premium);
-            order: -1; /* Força o Premium a vir acima no Mobile */
+            order: -1;
+            /* Força o Premium a vir acima no Mobile */
             transform: scale(1.02);
         }
 
@@ -914,10 +929,12 @@
                 transform: scale(1);
                 box-shadow: 0 8px 20px -4px rgba(34, 197, 94, 0.4);
             }
+
             50% {
                 transform: scale(1.02);
                 box-shadow: 0 12px 24px -4px rgba(34, 197, 94, 0.6);
             }
+
             100% {
                 transform: scale(1);
                 box-shadow: 0 8px 20px -4px rgba(34, 197, 94, 0.4);
@@ -988,7 +1005,8 @@
             }
 
             .pricing-card.featured {
-                order: 2; /* No desktop, o Premium vai pra direita */
+                order: 2;
+                /* No desktop, o Premium vai pra direita */
                 transform: scale(1.05);
                 height: 100%;
             }
@@ -1067,7 +1085,8 @@
                 justify-content: center;
             }
 
-            .steps-grid, .orderbumps-grid {
+            .steps-grid,
+            .orderbumps-grid {
                 gap: 30px;
             }
 
@@ -1093,10 +1112,12 @@
             transition: all 0.3s ease;
             backdrop-filter: blur(4px);
         }
+
         .exit-popup-overlay.show {
             opacity: 1;
             visibility: visible;
         }
+
         .exit-popup-content {
             background: var(--white);
             border-radius: 20px;
@@ -1110,9 +1131,11 @@
             box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
             border: 4px solid var(--primary);
         }
+
         .exit-popup-overlay.show .exit-popup-content {
             transform: scale(1) translateY(0);
         }
+
         .exit-popup-close {
             position: absolute;
             top: 15px;
@@ -1122,9 +1145,11 @@
             cursor: pointer;
             transition: color 0.2s;
         }
+
         .exit-popup-close:hover {
             color: var(--dark);
         }
+
         .exit-popup-title {
             font-size: 1.6rem;
             font-weight: 900;
@@ -1132,6 +1157,7 @@
             margin-bottom: 10px;
             line-height: 1.2;
         }
+
         .exit-popup-highlight {
             color: #ef4444;
             font-size: 1.2rem;
@@ -1139,12 +1165,14 @@
             display: block;
             margin: 15px 0;
         }
+
         .exit-popup-desc {
             font-size: 1rem;
             color: var(--dark-muted);
             margin-bottom: 25px;
             line-height: 1.5;
         }
+
         .exit-btn {
             background: linear-gradient(135deg, #16a34a 0%, #15803d 100%);
             color: white;
@@ -1158,12 +1186,14 @@
             transition: transform 0.2s, box-shadow 0.2s;
             animation: pulse-button 2s infinite;
         }
+
         .exit-btn:hover {
             transform: translateY(-2px);
             box-shadow: 0 6px 20px rgba(22, 163, 74, 0.4);
         }
     </style>
 </head>
+
 <body>
 
     <!-- SCARCITY HEADER TIMER -->
@@ -1185,13 +1215,17 @@
                     <div class="badge-premium">
                         <i class="fa-solid fa-crown"></i> Acesso Premium Vitalício
                     </div>
-                    <h1>BAIXE, EDITE E MONTE!<br><span class="gradient-text">O Maior Kit de Festas Editáveis no Canva</span></h1>
-                    <p class="hero-desc">Surpreenda sua família ou comece um negócio altamente lucrativo. Tenha acesso a mais de 10.000 temas de festa prontos e 100% personalizáveis direto no seu celular ou computador.</p>
-                    
+                    <h1>BAIXE, EDITE E MONTE!<br><span class="gradient-text">O Maior Acervo de Personalizados Para
+                            Festas 100% Editáveis no Canva!!</span></h1>
+                    <p class="hero-desc">Surpreenda sua família ou comece um negócio altamente lucrativo. Tenha acesso a
+                        mais de 10.000 temas de festa prontos e 100% personalizáveis direto no seu celular ou
+                        computador.</p>
+
                     <div class="hero-image-wrapper" style="margin: 20px auto 25px auto; max-width: 500px;">
-                        <img src="https://fiapy.nyc3.digitaloceanspaces.com/static/69e021b4977ccb509b7b0985/3e2b0e87b93dedca4aef_-_imagem%201.png" alt="Banner Kit Premium 10.000 Temas de Festa" style="width: 100%; height: auto;">
+                        <img src="https://fiapy.nyc3.digitaloceanspaces.com/static/69e021b4977ccb509b7b0985/3e2b0e87b93dedca4aef_-_imagem%201.png"
+                            alt="Banner Kit Premium 10.000 Temas de Festa" style="width: 100%; height: auto;">
                     </div>
-                    
+
                     <div class="hero-features">
                         <div class="feature-item">
                             <i class="fa-solid fa-check"></i> +10.000 Temas de Festa de todos os personagens
@@ -1211,7 +1245,7 @@
                     <a href="#precos" class="btn-cta">
                         ESCOLHER MEU PLANO <i class="fa-solid fa-arrow-down"></i>
                     </a>
-                    
+
                     <div class="cta-subtext">
                         <span><i class="fa-solid fa-shield-halved"></i> Compra 100% Segura</span>
                         <span><i class="fa-solid fa-bolt"></i> Acesso Imediato no E-mail</span>
@@ -1227,11 +1261,13 @@
         <div class="container">
             <div class="section-title-wrapper">
                 <h2 class="section-title">Confira Alguns Dos <span class="color-accent">Nossos Kits</span></h2>
-                <p class="section-subtitle">São milhares de arquivos criativos de alta resolução para você escolher. Tudo organizado por tema.</p>
+                <p class="section-subtitle">São milhares de arquivos criativos de alta resolução para você escolher.
+                    Tudo organizado por tema.</p>
             </div>
-            
+
             <div class="kits-image-container">
-                <img src="https://fiapy.nyc3.digitaloceanspaces.com/static/69e021b4977ccb509b7b0985/2198ab798af0e96b8a49_-_sem%20nome%20%28post%20para%20instagram%20%2845%29%29%20%286%29.png" alt="Exemplo de Kits de Festa e Moldes inclusos" width="900">
+                <img src="https://fiapy.nyc3.digitaloceanspaces.com/static/69e021b4977ccb509b7b0985/2198ab798af0e96b8a49_-_sem%20nome%20%28post%20para%20instagram%20%2845%29%29%20%286%29.png"
+                    alt="Exemplo de Kits de Festa e Moldes inclusos" width="900">
             </div>
         </div>
     </section>
@@ -1241,34 +1277,39 @@
         <div class="container">
             <div class="section-title-wrapper" style="text-align: center;">
                 <h2 class="section-title">Como Funciona o Acesso?</h2>
-                <p class="section-subtitle">Criar personalizados de festa nunca foi tão simples. Veja o passo a passo prático:</p>
+                <p class="section-subtitle">Criar personalizados de festa nunca foi tão simples. Veja o passo a passo
+                    prático:</p>
             </div>
-            
+
             <div class="steps-grid">
                 <div class="step-card">
                     <div class="step-number">1</div>
                     <div class="step-icon"><i class="fa-solid fa-cart-shopping"></i></div>
                     <h3>Faça sua Inscrição</h3>
-                    <p>Escolha o melhor plano abaixo, preencha seus dados de forma rápida e segura e finalize o pagamento (Pix ou Cartão).</p>
+                    <p>Escolha o melhor plano abaixo, preencha seus dados de forma rápida e segura e finalize o
+                        pagamento (Pix ou Cartão).</p>
                 </div>
-                
+
                 <div class="step-card">
                     <div class="step-number">2</div>
                     <div class="step-icon"><i class="fa-solid fa-envelope-open-text"></i></div>
                     <h3>Acesse no E-mail</h3>
-                    <p>O acesso à plataforma com os mais de 10.000 temas é enviado imediatamente para o seu e-mail cadastrado.</p>
+                    <p>O acesso à plataforma com os mais de 10.000 temas é enviado imediatamente para o seu e-mail
+                        cadastrado.</p>
                 </div>
-                
+
                 <div class="step-card">
                     <div class="step-number">3</div>
                     <div class="step-icon"><i class="fa-solid fa-wand-magic-sparkles"></i></div>
                     <h3>Edite e Divirta-se</h3>
-                    <p>Abra os moldes no Canva (pelo celular ou computador), troque o nome e a idade do aniversariante, imprima e monte!</p>
+                    <p>Abra os moldes no Canva (pelo celular ou computador), troque o nome e a idade do aniversariante,
+                        imprima e monte!</p>
                 </div>
             </div>
 
             <div class="how-image-container">
-                <img src="https://fiapy.nyc3.digitaloceanspaces.com/static/69e021b4977ccb509b7b0985/bf3fc1950f51e912188e_-_design%20sem%20nome%20%2827%29.png" alt="Fluxo de edição e uso dos moldes de festa" width="900">
+                <img src="https://fiapy.nyc3.digitaloceanspaces.com/static/69e021b4977ccb509b7b0985/bf3fc1950f51e912188e_-_design%20sem%20nome%20%2827%29.png"
+                    alt="Fluxo de edição e uso dos moldes de festa" width="900">
             </div>
         </div>
     </section>
@@ -1280,39 +1321,50 @@
         <div class="container">
             <div class="section-title-wrapper">
                 <h2 class="section-title">Quem Comprou, <span class="color-accent">Recomenda!</span></h2>
-                <p class="section-subtitle">Veja o resultado real de quem já está usando nossos moldes para fazer a alegria dos filhos ou ganhar dinheiro vendendo personalizados.</p>
+                <p class="section-subtitle">Veja o resultado real de quem já está usando nossos moldes para fazer a
+                    alegria dos filhos ou ganhar dinheiro vendendo personalizados.</p>
             </div>
-            
+
             <div class="testimonials-container">
-                <img src="https://fiapy.nyc3.digitaloceanspaces.com/static/69e021b4977ccb509b7b0985/8126a616572e28131e31_-_depoimento%20do%20lead%201.2.png" alt="Depoimentos reais de clientes do Kit Premium 10.000 Temas" width="700">
+                <img src="https://fiapy.nyc3.digitaloceanspaces.com/static/69e021b4977ccb509b7b0985/8126a616572e28131e31_-_depoimento%20do%20lead%201.2.png"
+                    alt="Depoimentos reais de clientes do Kit Premium 10.000 Temas" width="700">
             </div>
         </div>
     </section>
 
     <!-- SECTION: CONTEÚDO DO KIT E BÔNUS -->
-    <section class="section-bonus" style="background-color: var(--white); padding: 50px 0; text-align: center; border-bottom: 1px solid var(--light);">
+    <section class="section-bonus"
+        style="background-color: var(--white); padding: 50px 0; text-align: center; border-bottom: 1px solid var(--light);">
         <div class="container">
             <!-- PARTE 1: O QUE VEM NO KIT -->
             <div class="section-title-wrapper" style="margin-bottom: 30px;">
                 <h2 class="section-title">O Que Você Vai Receber no Kit?</h2>
-                <p class="section-subtitle" style="max-width: 600px; margin: 0 auto;">Confira a estrutura completa de arquivos e recursos prontos que preparamos para você:</p>
+                <p class="section-subtitle" style="max-width: 600px; margin: 0 auto;">Confira a estrutura completa de
+                    arquivos e recursos prontos que preparamos para você:</p>
             </div>
-            
-            <div class="bonus-image-container" style="border-radius: 24px; overflow: hidden; box-shadow: var(--shadow-lg); border: 4px solid var(--light); background-color: var(--light); max-width: 600px; margin: 0 auto 50px auto;">
-                <img src="https://fiapy.nyc3.digitaloceanspaces.com/static/69e021b4977ccb509b7b0985/f9e5ba8ac9e4bf3534da_-_design%20sem%20nome%20%2827%29.png" alt="Conteúdo do Kit 10.000 Temas de Festa" style="width: 100%; display: block;">
+
+            <div class="bonus-image-container"
+                style="border-radius: 24px; overflow: hidden; box-shadow: var(--shadow-lg); border: 4px solid var(--light); background-color: var(--light); max-width: 600px; margin: 0 auto 50px auto;">
+                <img src="https://fiapy.nyc3.digitaloceanspaces.com/static/69e021b4977ccb509b7b0985/f9e5ba8ac9e4bf3534da_-_design%20sem%20nome%20%2827%29.png"
+                    alt="Conteúdo do Kit 10.000 Temas de Festa" style="width: 100%; display: block;">
             </div>
 
             <!-- PARTE 2: SUPER BÔNUS ADICIONAIS -->
             <div class="section-title-wrapper" style="margin-bottom: 30px;">
-                <span class="bonus-badge" style="background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%); color: var(--white); display: inline-block; padding: 6px 18px; border-radius: 50px; font-weight: 800; font-size: 0.8rem; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 16px; box-shadow: var(--shadow-sm);">
+                <span class="bonus-badge"
+                    style="background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%); color: var(--white); display: inline-block; padding: 6px 18px; border-radius: 50px; font-weight: 800; font-size: 0.8rem; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 16px; box-shadow: var(--shadow-sm);">
                     🎁 SUPER BÔNUS INCLUSOS
                 </span>
-                <h2 class="section-title">Ganhe Também Estes <span class="color-accent" style="color: var(--primary);">Bônus Especiais</span></h2>
-                <p class="section-subtitle" style="max-width: 600px; margin: 0 auto;">Ao garantir o seu acesso hoje, você também recebe estes bônus incríveis para acelerar seus resultados:</p>
+                <h2 class="section-title">Ganhe Também Estes <span class="color-accent"
+                        style="color: var(--primary);">Bônus Especiais</span></h2>
+                <p class="section-subtitle" style="max-width: 600px; margin: 0 auto;">Ao garantir o seu acesso hoje,
+                    você também recebe estes bônus incríveis para acelerar seus resultados:</p>
             </div>
-            
-            <div class="bonus-image-container" style="border-radius: 24px; overflow: hidden; box-shadow: var(--shadow-lg); border: 4px solid var(--light); background-color: var(--light); max-width: 600px; margin: 0 auto;">
-                <img src="https://fiapy.nyc3.digitaloceanspaces.com/static/69e021b4977ccb509b7b0985/8e6795c9c09f6bb65752_-_design%20sem%20nome%20%2830%29.png" alt="Super Bônus Inclusos" style="width: 100%; display: block;">
+
+            <div class="bonus-image-container"
+                style="border-radius: 24px; overflow: hidden; box-shadow: var(--shadow-lg); border: 4px solid var(--light); background-color: var(--light); max-width: 600px; margin: 0 auto;">
+                <img src="https://fiapy.nyc3.digitaloceanspaces.com/static/69e021b4977ccb509b7b0985/8e6795c9c09f6bb65752_-_design%20sem%20nome%20%2830%29.png"
+                    alt="Super Bônus Inclusos" style="width: 100%; display: block;">
             </div>
         </div>
     </section>
@@ -1322,16 +1374,17 @@
         <div class="container">
             <div class="section-title-wrapper">
                 <h2 class="section-title">Escolha o Seu Plano Ideal</h2>
-                <p class="section-subtitle">Garanta acesso vitalício aos arquivos editáveis no Canva. Preço de lançamento por tempo limitado.</p>
+                <p class="section-subtitle">Garanta acesso vitalício aos arquivos editáveis no Canva. Preço de
+                    lançamento por tempo limitado.</p>
             </div>
 
             <div class="pricing-grid">
-                
+
                 <!-- PLANO BÁSICO -->
                 <div class="pricing-card">
                     <h3 class="pricing-title">PLANO BÁSICO</h3>
                     <p class="pricing-subtitle">Kit completo para criar suas festas no Canva</p>
-                    
+
                     <div class="price-wrapper">
                         <span class="old-price">De R$ 47,00</span>
                         <h4 class="current-price">
@@ -1339,7 +1392,7 @@
                         </h4>
                         <span class="price-details">PAGAMENTO ÚNICO - SEM MENSALIDADE</span>
                     </div>
-                    
+
                     <div class="pricing-features">
                         <div class="p-feature-item">
                             <i class="fa-solid fa-circle-check"></i>
@@ -1360,7 +1413,8 @@
                     </div>
 
                     <!-- Botão do Plano Básico - Abre modal de upsell antes de ir ao checkout -->
-                    <button id="btnBasico" class="btn-cta" style="background-color: var(--dark); font-size: 1rem; box-shadow: none; animation: none; border: none; cursor: pointer; width: 100%;">
+                    <button id="btnBasico" class="btn-cta"
+                        style="background-color: var(--dark); font-size: 1rem; box-shadow: none; animation: none; border: none; cursor: pointer; width: 100%;">
                         COMPRAR PLANO BÁSICO <i class="fa-solid fa-arrow-right"></i>
                     </button>
                 </div>
@@ -1370,7 +1424,7 @@
                     <div class="featured-badge">🚀 RECOMENDADO</div>
                     <h3 class="pricing-title">PLANO PREMIUM</h3>
                     <p class="pricing-subtitle">Tudo do Básico + Combo Principal e Bônus</p>
-                    
+
                     <div class="price-wrapper">
                         <span class="old-price">De R$ 97,00</span>
                         <h4 class="current-price">
@@ -1378,7 +1432,7 @@
                         </h4>
                         <span class="price-details">PAGAMENTO ÚNICO - EXPERIÊNCIA COMPLETA</span>
                     </div>
-                    
+
                     <div class="pricing-features">
                         <!-- BASE: Tudo do Básico -->
                         <div class="p-feature-item">
@@ -1395,7 +1449,9 @@
                         </div>
                         <!-- SEPARADOR VISUAL -->
                         <div style="border-top: 1px dashed rgba(139,92,246,0.25); margin: 4px 0; padding-top: 4px;">
-                            <span style="font-size: 0.7rem; font-weight: 800; color: var(--primary); text-transform: uppercase; letter-spacing: 0.5px;">+ Combo Principal & Bônus</span>
+                            <span
+                                style="font-size: 0.7rem; font-weight: 800; color: var(--primary); text-transform: uppercase; letter-spacing: 0.5px;">+
+                                Combo Principal & Bônus</span>
                         </div>
                         <!-- COMBO PRINCIPAL -->
                         <div class="p-feature-item" style="color: var(--primary); font-weight: 700;">
@@ -1415,12 +1471,14 @@
                         <!-- BÔNUS 3 -->
                         <div class="p-feature-item" style="color: var(--secondary); font-weight: 700;">
                             <i class="fa-solid fa-gift"></i>
-                            <span><strong>Bônus 3:</strong> Calendário Editorial de Festas — 12 meses de temas planejados</span>
+                            <span><strong>Bônus 3:</strong> Calendário Editorial de Festas — 12 meses de temas
+                                planejados</span>
                         </div>
                         <!-- BÔNUS 4 -->
                         <div class="p-feature-item" style="color: var(--secondary); font-weight: 700;">
                             <i class="fa-solid fa-gift"></i>
-                            <span><strong>Bônus 4:</strong> Pack de Mockups Profissionais para apresentar e vender seus kits</span>
+                            <span><strong>Bônus 4:</strong> Pack de Mockups Profissionais para apresentar e vender seus
+                                kits</span>
                         </div>
                     </div>
 
@@ -1444,7 +1502,10 @@
                 </div>
                 <div class="guarantee-content">
                     <h3>Garantia Incondicional de 7 Dias</h3>
-                    <p>Não tem certeza se o kit é para você? Não se preocupe! Compre sem riscos. Teste os moldes por 7 dias inteiros. Se você não gostar da qualidade dos temas ou achar que o material não é o que esperava, envie um e-mail para o suporte e devolveremos 100% do seu dinheiro, sem perguntas e sem complicação.</p>
+                    <p>Não tem certeza se o kit é para você? Não se preocupe! Compre sem riscos. Teste os moldes por 7
+                        dias inteiros. Se você não gostar da qualidade dos temas ou achar que o material não é o que
+                        esperava, envie um e-mail para o suporte e devolveremos 100% do seu dinheiro, sem perguntas e
+                        sem complicação.</p>
                 </div>
             </div>
         </div>
@@ -1457,7 +1518,7 @@
                 <h2 class="section-title">Dúvidas Frequentes</h2>
                 <p class="section-subtitle">Tire todas as suas dúvidas antes de garantir o seu acesso promocional.</p>
             </div>
-            
+
             <div class="faq-wrapper">
                 <!-- FAQ 1 -->
                 <div class="faq-item">
@@ -1467,7 +1528,8 @@
                     </button>
                     <div class="faq-answer">
                         <div class="faq-answer-content">
-                            O acesso é totalmente digital e enviado instantaneamente para o seu e-mail cadastrado logo após a confirmação do pagamento. Pagando via Pix, você recebe em menos de 2 minutos.
+                            O acesso é totalmente digital e enviado instantaneamente para o seu e-mail cadastrado logo
+                            após a confirmação do pagamento. Pagando via Pix, você recebe em menos de 2 minutos.
                         </div>
                     </div>
                 </div>
@@ -1480,7 +1542,8 @@
                     </button>
                     <div class="faq-answer">
                         <div class="faq-answer-content">
-                            Não! Todos os nossos moldes e arquivos foram criados para funcionar perfeitamente na versão GRATUITA do Canva. Você não precisa gastar mais nada para editar seus temas.
+                            Não! Todos os nossos moldes e arquivos foram criados para funcionar perfeitamente na versão
+                            GRATUITA do Canva. Você não precisa gastar mais nada para editar seus temas.
                         </div>
                     </div>
                 </div>
@@ -1493,7 +1556,8 @@
                     </button>
                     <div class="faq-answer">
                         <div class="faq-answer-content">
-                            O acesso é de taxa única e vitalício. Não há mensalidades ou cobranças futuras. Você paga uma vez e os arquivos são seus para sempre, com direito a todas as atualizações futuras.
+                            O acesso é de taxa única e vitalício. Não há mensalidades ou cobranças futuras. Você paga
+                            uma vez e os arquivos são seus para sempre, com direito a todas as atualizações futuras.
                         </div>
                     </div>
                 </div>
@@ -1506,7 +1570,9 @@
                     </button>
                     <div class="faq-answer">
                         <div class="faq-answer-content">
-                            Sim, com toda certeza! O Canva possui um aplicativo gratuito excelente para smartphones (Android e iOS). Você pode editar nomes, cores, idades e elementos diretamente pelo celular de forma prática.
+                            Sim, com toda certeza! O Canva possui um aplicativo gratuito excelente para smartphones
+                            (Android e iOS). Você pode editar nomes, cores, idades e elementos diretamente pelo celular
+                            de forma prática.
                         </div>
                     </div>
                 </div>
@@ -1519,7 +1585,10 @@
                     </button>
                     <div class="faq-answer">
                         <div class="faq-answer-content">
-                            Você pode imprimir em qualquer impressora caseira comum (jato de tinta ou laser) ou levar os arquivos salvos em PDF para imprimir em uma gráfica rápida de sua preferência. Recomendamos a impressão em Papel Fotográfico Glossy ou Matte de gramatura 180g a 230g para dar maior sustentação e brilho aos personalizados.
+                            Você pode imprimir em qualquer impressora caseira comum (jato de tinta ou laser) ou levar os
+                            arquivos salvos em PDF para imprimir em uma gráfica rápida de sua preferência. Recomendamos
+                            a impressão em Papel Fotográfico Glossy ou Matte de gramatura 180g a 230g para dar maior
+                            sustentação e brilho aos personalizados.
                         </div>
                     </div>
                 </div>
@@ -1531,7 +1600,8 @@
     <footer class="footer">
         <div class="container">
             <div class="footer-logo-img">
-                <img src="https://fiapy.nyc3.digitaloceanspaces.com/static/69e021b4977ccb509b7b0985/7e31979172c22796075d_-_imagem%206.png" alt="Informações Importantes do Rodapé" style="margin: 0 auto;">
+                <img src="https://fiapy.nyc3.digitaloceanspaces.com/static/69e021b4977ccb509b7b0985/7e31979172c22796075d_-_imagem%206.png"
+                    alt="Informações Importantes do Rodapé" style="margin: 0 auto;">
             </div>
 
             <div class="footer-security">
@@ -1580,7 +1650,7 @@
             button.addEventListener('click', () => {
                 const faqItem = button.parentElement;
                 const isActive = faqItem.classList.contains('active');
-                
+
                 // Fecha todas as perguntas abertas
                 document.querySelectorAll('.faq-item').forEach(item => {
                     item.classList.remove('active');
@@ -1603,7 +1673,7 @@
             display: none;
             position: fixed;
             inset: 0;
-            background: rgba(0,0,0,0.75);
+            background: rgba(0, 0, 0, 0.75);
             backdrop-filter: blur(6px);
             -webkit-backdrop-filter: blur(6px);
             z-index: 9999;
@@ -1611,7 +1681,10 @@
             justify-content: center;
             padding: 16px;
         }
-        .popup-overlay.show { display: flex; }
+
+        .popup-overlay.show {
+            display: flex;
+        }
 
         .popup-box {
             position: relative;
@@ -1619,12 +1692,20 @@
             max-width: 460px;
             border-radius: 28px;
             overflow: hidden;
-            box-shadow: 0 30px 80px rgba(0,0,0,0.55), 0 0 0 1px rgba(255,255,255,0.08);
-            animation: popupIn 0.45s cubic-bezier(0.34,1.56,0.64,1) both;
+            box-shadow: 0 30px 80px rgba(0, 0, 0, 0.55), 0 0 0 1px rgba(255, 255, 255, 0.08);
+            animation: popupIn 0.45s cubic-bezier(0.34, 1.56, 0.64, 1) both;
         }
+
         @keyframes popupIn {
-            from { transform: scale(0.8) translateY(30px); opacity: 0; }
-            to   { transform: scale(1) translateY(0);     opacity: 1; }
+            from {
+                transform: scale(0.8) translateY(30px);
+                opacity: 0;
+            }
+
+            to {
+                transform: scale(1) translateY(0);
+                opacity: 1;
+            }
         }
 
         /* Cabeçalho escuro com gradiente */
@@ -1634,27 +1715,36 @@
             text-align: center;
             position: relative;
         }
+
         .popup-header::before {
             content: '';
             position: absolute;
             inset: 0;
-            background: radial-gradient(ellipse at 50% -20%, rgba(167,139,250,0.25) 0%, transparent 70%);
+            background: radial-gradient(ellipse at 50% -20%, rgba(167, 139, 250, 0.25) 0%, transparent 70%);
         }
+
         .popup-close-btn {
             position: absolute;
-            top: 14px; right: 16px;
-            background: rgba(255,255,255,0.1);
+            top: 14px;
+            right: 16px;
+            background: rgba(255, 255, 255, 0.1);
             border: none;
             color: #fff;
-            width: 30px; height: 30px;
+            width: 30px;
+            height: 30px;
             border-radius: 50%;
             font-size: 1rem;
             cursor: pointer;
-            display: flex; align-items: center; justify-content: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
             transition: background 0.2s;
             z-index: 2;
         }
-        .popup-close-btn:hover { background: rgba(255,255,255,0.22); }
+
+        .popup-close-btn:hover {
+            background: rgba(255, 255, 255, 0.22);
+        }
 
         .popup-tag {
             display: inline-flex;
@@ -1672,6 +1762,7 @@
             position: relative;
             z-index: 2;
         }
+
         .popup-headline {
             font-size: 1.5rem;
             font-weight: 900;
@@ -1681,10 +1772,14 @@
             position: relative;
             z-index: 2;
         }
-        .popup-headline span { color: #c084fc; }
+
+        .popup-headline span {
+            color: #c084fc;
+        }
+
         .popup-subline {
             font-size: 0.8rem;
-            color: rgba(255,255,255,0.65);
+            color: rgba(255, 255, 255, 0.65);
             line-height: 1.4;
             position: relative;
             z-index: 2;
@@ -1705,12 +1800,14 @@
             gap: 12px;
             margin-bottom: 18px;
         }
+
         .popup-price-old {
             font-size: 0.85rem;
             color: #94a3b8;
             text-decoration: line-through;
             font-weight: 600;
         }
+
         .popup-price-new {
             font-size: 2.6rem;
             font-weight: 900;
@@ -1718,6 +1815,7 @@
             letter-spacing: -1px;
             line-height: 1;
         }
+
         .popup-price-badge {
             background: #dcfce7;
             color: #16a34a;
@@ -1736,6 +1834,7 @@
             margin-bottom: 20px;
             text-align: left;
         }
+
         .popup-item {
             display: flex;
             align-items: center;
@@ -1747,7 +1846,11 @@
             color: #1e1e2e;
             border: 1.5px solid transparent;
         }
-        .popup-item i { font-size: 1rem; flex-shrink: 0; }
+
+        .popup-item i {
+            font-size: 1rem;
+            flex-shrink: 0;
+        }
 
         /* CTA verde principal */
         .popup-cta-btn {
@@ -1761,14 +1864,16 @@
             font-weight: 900;
             letter-spacing: 0.3px;
             text-decoration: none;
-            box-shadow: 0 8px 24px rgba(34,197,94,0.38);
+            box-shadow: 0 8px 24px rgba(34, 197, 94, 0.38);
             transition: transform 0.2s, box-shadow 0.2s;
             margin-bottom: 12px;
         }
+
         .popup-cta-btn:hover {
             transform: translateY(-2px);
-            box-shadow: 0 12px 32px rgba(34,197,94,0.5);
+            box-shadow: 0 12px 32px rgba(34, 197, 94, 0.5);
         }
+
         .popup-decline {
             font-size: 0.73rem;
             color: #94a3b8;
@@ -1778,6 +1883,7 @@
             border: none;
             font-family: inherit;
         }
+
         .popup-guarantee {
             display: flex;
             align-items: center;
@@ -1803,7 +1909,10 @@
             color: #92400e;
             letter-spacing: 0.3px;
         }
-        #popupCountdown { font-variant-numeric: tabular-nums; }
+
+        #popupCountdown {
+            font-variant-numeric: tabular-nums;
+        }
     </style>
 
     <div class="popup-overlay" id="exitPopup">
@@ -1880,7 +1989,8 @@
                     &#9989;&nbsp; SIM! QUERO TUDO POR R$&nbsp;15,00 &nbsp;<i class="fa-solid fa-arrow-right"></i>
                 </a>
 
-                <button class="popup-decline" id="declineExitPopup">Não obrigado, prefiro perder essa oportunidade.</button>
+                <button class="popup-decline" id="declineExitPopup">Não obrigado, prefiro perder essa
+                    oportunidade.</button>
 
                 <div class="popup-guarantee">
                     <i class="fa-solid fa-shield-heart" style="color:#22c55e;"></i>
@@ -1937,7 +2047,7 @@
 
         // Intercepta cliques nos links com âncora (#) para bloquear o popstate temporariamente
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function(e) {
+            anchor.addEventListener('click', function (e) {
                 blockPopState = true;
                 setTimeout(() => {
                     blockPopState = false;
@@ -1992,7 +2102,7 @@
 
         document.getElementById('btnBasico').addEventListener('click', function (e) {
             popupFromBasico = true;
-            
+
             // Dispara o InitiateCheckout para o Plano Básico
             if (typeof fbq === 'function') {
                 fbq('track', 'InitiateCheckout', {
@@ -2019,7 +2129,7 @@
             closeExitPopup();
             if (popupFromBasico) {
                 popupFromBasico = false;
-                
+
                 // Dispara InitiateCheckout no redirecionamento do básico
                 if (typeof fbq === 'function') {
                     fbq('track', 'InitiateCheckout', {
@@ -2028,8 +2138,8 @@
                         currency: 'BRL'
                     });
                 }
-                
-                setTimeout(function() {
+
+                setTimeout(function () {
                     window.open('https://pay.wiapy.com/Xnn_R0YhRJJ', '_blank');
                 }, 150);
             }
@@ -2061,7 +2171,7 @@
                         currency: 'BRL'
                     });
                 }
-                setTimeout(function() {
+                setTimeout(function () {
                     window.open(href, anchor.getAttribute('target') || '_self');
                 }, 150);
             }
@@ -2076,11 +2186,12 @@
                         currency: 'BRL'
                     });
                 }
-                setTimeout(function() {
+                setTimeout(function () {
                     window.open(href, anchor.getAttribute('target') || '_self');
                 }, 150);
             }
         });
     </script>
 </body>
+
 </html>
